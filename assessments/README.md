@@ -56,16 +56,6 @@ To reset the **PostgreSQL** database, run the following command:
 <ADD THE COMMAND HERE>
 ```
 
-## Seeding Admin and Basic Users
-
-To seed the database with `ADMIN` and `BASIC` users, run the following command:
-
-```bash
-<ADD THE COMMAND HERE>
-```
-
-This will insert predefined users with admin and basic roles into the database.
-
 ## Seeding the Database with Prisma
 
 To seed your database with additional data using **Prisma**, follow these steps:
