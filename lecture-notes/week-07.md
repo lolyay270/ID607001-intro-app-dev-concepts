@@ -74,7 +74,7 @@ const register = async (req, res) => {
 
 ### Authorisation Middleware
 
-In the `middleware` directory, create a new file called `authorisation.js`. In the `authorisation.js` file, add the following code:
+In the `middleware` directory, create a new file called `adminAuthorisation.js`. In the `adminAuthorisation.js` file, add the following code:
 
 ```js
 import { PrismaClient } from "@prisma/client";
@@ -120,7 +120,8 @@ const router = express.Router();
 
 // Note: Swagger documentation has been removed for brevity
 
-router.post("/", validatePostInstitution, adminAuthorisation, createInstitution);router.get("/", getInstitutions);
+router.post("/", validatePostInstitution, adminAuthorisation, createInstitution);
+router.get("/", getInstitutions);
 router.get("/:id", getInstitution);
 router.put("/:id", validatePutInstitution, updateInstitution);
 router.delete("/:id", deleteInstitution);
