@@ -9,7 +9,7 @@ You can access the deployed REST API on Render - [REPLACE WITH A LINK TO YOUR RE
 
 ```bash
 git clone <REPLACE WITH A LINK TO YOUR GITHUB REPO.git>
-cd <REPLACE WITH YOUR GITHUB REPO NAME>
+cd <REPLACE WITH THE REST API PROJECT DIRECTORY>
 ```
 
 2. Install the required dependencies:
