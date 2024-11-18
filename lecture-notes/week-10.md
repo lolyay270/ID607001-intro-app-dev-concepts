@@ -53,7 +53,7 @@ You can customise the **ERD** by adding the following code to the `schema.prisma
 ```javascript
 generator erd {
   provider = "prisma-erd-generator"
-  output = "./prisma/erd.svg"
+  output = "./erd.svg"
   theme = "forest"
 }
 ```
