@@ -1,13 +1,9 @@
 # Project and Practical
 
-## REST APIs URL (Render Web Service)
-You can access the deployed REST APIs on Render using the following URL:
-- [Your choice REST API](<REPLACE WITH A LINK TO YOUR REST API>)
-- [OpenTDB REST API](<REPLACE WITH A LINK TO YOUR REST API>)
+## REST API URL (Render Web Service)
+You can access the deployed REST API on Render - [REPLACE WITH A LINK TO YOUR REST API PROJECT NAME](<REPLACE WITH A LINK TO YOUR REST API>)
 
 ## Setup Environment
-
-Follow these steps to set up the project after cloning the repository:
 
 1. Clone the repository:
 
@@ -29,16 +25,6 @@ DATABASE_URL=
 
 ADD OTHER ENVIRONMENT VARIABLES
 ```
-
-## Running REST APIs Locally
-
-To run the REST APIs on your local machine, run the following command:
-
-```bash
-<ADD THE COMMAND HERE>
-```
-
-Your local API should now be running on <http://localhost:3000>.
 
 ## Database Migration
 
@@ -70,9 +56,19 @@ To seed your database with additional data using **Prisma**, follow these steps:
 
 The seeding script will populate your database with the necessary data.
 
+## Running REST API Locally
+
+To run the REST API on your local machine, run the following command:
+
+```bash
+<ADD THE COMMAND HERE>
+```
+
+Your local API should now be running on <http://localhost:3000>.
+
 ## Running API Tests
 
-Ensure that your development server is running (or use a test database).
+**NOTE:** Remove this section for the **OpenTDB REST API** REST API.
 
 To run the **API tests** locally, run the following command:
 
@@ -108,7 +104,7 @@ To format your code according to project guidelines, run the following command:
 
 ## Entity Relationship Diagram (ERD)
 
-Below are the Entity Relationship Diagrams (ERDs) for the REST APIs:
+Below are the Entity Relationship Diagrams (ERDs) for the REST API:
 
 ```bash
 <ADD THE DIAGRAMS HERE>
