@@ -185,7 +185,7 @@ describe("Institutions", () => {
           .expect(res.body.message)
           .to.be.equal("Institution successfully created");
         chai.expect(res.body.data).to.be.an("array");
-        institutionId = res.body.data[0].id; // Store the institution ID from the response
+        institutionId = res.body.data.at(-1).id; // Store the most recently created institution ID
         done();
       });
   });
