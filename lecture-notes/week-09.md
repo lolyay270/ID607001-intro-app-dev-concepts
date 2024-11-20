@@ -184,6 +184,7 @@ describe("Institutions", () => {
         chai
           .expect(res.body.message)
           .to.be.equal("Institution successfully created");
+        chai.expect(res.body.data).to.be.an("array");
         institutionId = res.body.data[0].id; // Store the institution ID from the response
         done();
       });
@@ -275,6 +276,54 @@ describe("Institutions", () => {
         chai.expect(res.status).to.be.equal(200);
         chai.expect(res.body).to.be.a("object");
         chai.expect(res.body.message).to.be.equal("Institution updated");
+        chai.expect(res.body.data).to.be.an("object");
+        done();
+      });
+  });
+
+  it("should error in auth", (done) => {
+    chai
+      .request(app)
+      .get("/api/v1/institutions")
+      //removed set
+      .end((req, res) => {
+        chai.expect(res.status).to.be.equal(403);
+        chai.expect(res.body).to.be.a("object");
+        chai.expect(res.body.msg).to.be.equal("No token provided");
+        done();
+      });
+  });
+
+  it("should error in create validation", (done) => {
+    chai
+      .request(app)
+      .post("/api/v1/institutions")
+      .set("Authorization", `Bearer ${authToken}`)
+      .send({
+        name: "Otago University",
+        region: 100,
+        country: "New Zealand",
+      })
+      .end((req, res) => {
+        chai.expect(res.status).to.be.equal(409);
+        chai.expect(res.body).to.be.an("object");
+        chai.expect(res.body.msg).to.be.equal("region should be a string");
+        done();
+      });
+  });
+
+  it("should error in update validation", (done) => {
+    chai
+      .request(app)
+      .put(`/api/v1/institutions/${institutionId}`)
+      .set("Authorization", `Bearer ${authToken}`)
+      .send({
+          name: ""
+      })
+      .end((req, res) => {
+        chai.expect(res.status).to.be.equal(409);
+        chai.expect(res.body).to.be.an("object");
+        chai.expect(res.body.msg).to.be.equal("name cannot be empty");
         done();
       });
   });
