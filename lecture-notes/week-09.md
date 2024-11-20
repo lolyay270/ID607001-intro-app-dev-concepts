@@ -206,6 +206,7 @@ describe("Institutions", () => {
         chai
           .expect(res.body.message)
           .to.be.equal("Institution successfully created");
+        chai.expect(res.body.data).to.be.an('array');
         done();
       });
   });
