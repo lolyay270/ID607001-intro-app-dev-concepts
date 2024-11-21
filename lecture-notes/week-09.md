@@ -16,7 +16,7 @@ Open your **s2-24-intro-app-dev-repo-GitHub username** repository in **Visual St
 
 ## Seeding
 
-Before we create our tests, let us create a script to seed our database with data. In the `prisma` directory, create a file named `seed.js` and add the following code.
+Before we create our tests, let us create a script to seed our users. With seeded users we can authenticate each test. In the `prisma` directory, create a file named `seed.js` and add the following code.
 
 ```javascript
 import { PrismaClient } from "@prisma/client";
